@@ -12,12 +12,13 @@ public class driverBase {
 
     public WebDriver driverInit() {
         String os = System.getProperty("os.name");
+        System.out.println(os);
         /*		根据不同系统走不同的驱动配置
          */
         if (os.contentEquals("Windows 10")) {
             System.setProperty("webdriver.chrome.driver", "D:\\Git\\imooc\\coding-118-master\\coding-118\\chromedriver_win32\\chromedriver.exe");
-        } else if (os.contentEquals("MAC")) {
-            System.setProperty("webdriver.chrome.driver", "//Users//jiubugaosuni//workspace//javaSelenium//chromedriver");
+        } else if (os.contentEquals("Mac OS X")) {
+            System.setProperty("webdriver.chrome.driver", "/Users/jiubugaosuni/Downloads/Git/autotest/autotest/chromedriver");
         } else {
             System.out.println("没有相应驱动");
         }
@@ -27,6 +28,7 @@ public class driverBase {
 //        option.addArguments("headless");
         driver = new ChromeDriver(option);
         return driver;
+        
 
     }
 

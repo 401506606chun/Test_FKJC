@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import base.driverBase;
+import base.DriverBase;
 
 public class testLogin {
-	driverBase base = new driverBase();
+	DriverBase base = new DriverBase();
 	public  WebDriver driver = base.driverInit();
 	
 	

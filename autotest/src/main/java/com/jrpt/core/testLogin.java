@@ -38,7 +38,8 @@ public class testLogin {
 		 * **/	
 		testLogin test = new testLogin();
 		System.out.println("第一条case");
-		System.out.println("输入admin/123456,结果是"+test.login("admin","123456"));	
+		System.out.println("输入admin/123456,结果是"+test.login("admin","123456"));
+		System.out.println("输入admin/123456,结果是"+test.login("admin","111111"));
 	}
 
 }

@@ -35,11 +35,8 @@ public class BasePage {
         return element;
     }
 
+    //找到页面对应的元素定位信息
     public By getByLocator(String pageName, String key) {
-    	String keyMessage = null;
-        
-        String locatorType = null;
-        String locatorValue = null;
        
         /*		根据不同系统走不同取不同的路径
          */
@@ -54,6 +51,9 @@ public class BasePage {
     	
     	
         List<String> list = read.readFile(filePath);
+    	String keyMessage = null;
+        String locatorType = null;
+        String locatorValue = null;
         for (int i = 0; i < list.size(); i++) {
             keyMessage = list.get(i);
             if (keyMessage.split(">")[0].contentEquals(key)) {
@@ -61,13 +61,8 @@ public class BasePage {
                 locatorValue = keyMessage.split(">")[2];
             }else{
                 System.out.println("第"+i+"行没找到对应key");
-            }
-        
-      
+            }      
         }
-
-
-
 
         if (locatorType.equals("id")) {
             return By.id(locatorValue);

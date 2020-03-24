@@ -19,6 +19,7 @@ public class DriverBase {
 
     public WebDriver driverInit() {
         String os = System.getProperty("os.name");
+        System.out.print(os);
         /*		根据不同系统走不同的驱动配置
          */
         if (os.contentEquals("Windows 10")) {

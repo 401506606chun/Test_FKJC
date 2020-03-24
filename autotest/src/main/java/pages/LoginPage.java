@@ -14,11 +14,9 @@ public class LoginPage extends BasePage {
     /*
     获取 用户名user、密码password输入框
     */
-    public WebElement getLoginpageElement(String pageName,String key) {
-
-        return findElement(getByLocator("loginPage","user"));
-    }
-
+//    public WebElement getLoginpageElement(String pageName,String key) {
+//        return findElement(getByLocator("loginPage","user"));
+//    }
     public WebElement getUserElement() {
         return findElement(getByLocator("loginPage","user"));
     }

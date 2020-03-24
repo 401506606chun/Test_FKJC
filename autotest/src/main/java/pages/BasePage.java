@@ -36,12 +36,24 @@ public class BasePage {
     }
 
     public By getByLocator(String pageName, String key) {
-        List<String> list = read.readFile("D:\\Git\\github-20200109\\autotest\\" + pageName + ".txt");
-
-        String keyMessage = null;
-
+    	String keyMessage = null;
+        
         String locatorType = null;
         String locatorValue = null;
+       
+        /*		根据不同系统走不同取不同的路径
+         */
+        String filePath = null;
+    	String os = System.getProperty("os.name");
+        if (os.contentEquals("Windows 10")) {
+        	filePath ="D:\\Git\\github-20200109\\autotest\\" + pageName + ".txt";
+
+        } else if (os.contentEquals("Mac OS X")) {
+        	filePath ="/Users/jiubugaosuni/Downloads/Git/autotest/autotest/"+ pageName + ".txt";
+        } 
+    	
+    	
+        List<String> list = read.readFile(filePath);
         for (int i = 0; i < list.size(); i++) {
             keyMessage = list.get(i);
             if (keyMessage.split(">")[0].contentEquals(key)) {
@@ -50,6 +62,8 @@ public class BasePage {
             }else{
                 System.out.println("第"+i+"行没找到对应key");
             }
+        
+      
         }
 
 

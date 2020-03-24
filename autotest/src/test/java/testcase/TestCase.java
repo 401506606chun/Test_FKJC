@@ -1,5 +1,9 @@
 package testcase;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import base.DriverBase;
 import constant.Constant;
 import org.openqa.selenium.By;
@@ -35,22 +39,30 @@ public class TestCase {
         boolean isLogin = false;
 //        出现退出按钮 证明登录成功
         WebElement logout = driver.findElement(By.xpath("//a[text()=' 退出']"));
-        return logout.isDisplayed();
+        isLogin = logout.isDisplayed();
+        return isLogin;
     }
     @Test
     public void testLoginSuccess(){
         this.signIn(Constant.loginUrl,"admin","123456");
-        Assert.assertTrue(this.loginResult());
+        AssertJUnit.assertTrue(this.loginResult());
     }
     @Test
     public void testLoginError(){
         this.signIn(Constant.loginUrl,"admin","1234567");
-        Assert.assertTrue(this.loginResult());
+        AssertJUnit.assertTrue(this.loginResult());
     }
+    @Test
+    public void testLogin(String user,String pwd) {
+    	this.signIn(Constant.loginUrl,user,pwd);
+        AssertJUnit.assertTrue(this.loginResult());
+    }
+    
+    
 //    public static void main(String args[]) {
 //        TestCase testCase = new TestCase();
 //        testCase.signIn(Constant.loginUrl);
-//
+///Users/jiubugaosuni/Downloads/Git/autotest/autotest
 //    }
 
 }

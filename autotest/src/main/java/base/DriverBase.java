@@ -14,9 +14,7 @@ import java.util.List;
 
 public class DriverBase {
     public WebDriver webDriver;
-
-
-
+    
     public WebDriver driverInit() {
         String os = System.getProperty("os.name");
         System.out.print(os);

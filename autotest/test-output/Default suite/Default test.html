@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 24 21:51:48 CST 2020</td>
+<td>Started on:</td><td>Fri Mar 27 12:24:57 CST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13599 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15104 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,30 +75,36 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcase.TestCase.testLoginError()'><b>testLoginError</b><br>Test class: testcase.TestCase</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos; 退出&apos;]&quot;}
-  (Session info: chrome=80.0.3987.149)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Mac OS X 10.12.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td title='testcase.LoginTest.f2()'><b>f2</b><br>Test class: testcase.LoginTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=0   chromedriver                        0x0000000102d4dec9 chromedriver + 3837641
+1   chromedriver                        0x0000000102ce7cc3 chromedriver + 3419331
+2   chromedriver                        0x0000000102a5c042 chromedriver + 749634
+3   chromedriver                        0x00000001029bf4cc chromedriver + 107724
+4   chromedriver                        0x00000001029e5f2c chromedriver + 266028
+5   chromedriver                        0x00000001029e4342 chromedriver + 258882
+6   chromedriver                        0x00000001029e3b87 chromedriver + 256903
+7   chromedriver                        0x00000001029aa079 chromedriver + 20601
+8   chromedriver                        0x0000000102d0fa5f chromedriver + 3582559
+9   chromedriver                        0x0000000102d1c9ea chromedriver + 3635690
+10  chromedriver                        0x0000000102d1c787 chromedriver + 3635079
+11  chromedriver                        0x0000000102cf33d9 chromedriver + 3466201
+12  chromedriver                        0x0000000102d1d2a7 chromedriver + 3637927
+13  chromedriver                        0x0000000102d05867 chromedriver + 3541095
+14  chromedriver                        0x00000001029a7ad7 chromedriver + 10967
+15  libdyld.dylib                       0x00007fffa932e235 start + 1
+16  ???                                 0x0000000000000002 0x0 + 2
+, error=invalid session id, message=invalid session id}
 Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
 System info: host: &apos;jiubugaosunideMacBook-Pro.local&apos;, ip: &apos;192.168.2.105&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:63894}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=/var/folders/nd/v6qfnlyj7gq_l728vhl8zc0h0000gn/T/.com.google.Chrome.OXypIE}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.149, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 04becd22edfb829f989c50858d1f3bb6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:367)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
-	at testcase.TestCase.loginResult(TestCase.java:39)
-	at testcase.TestCase.testLoginError(TestCase.java:51)
+	at pages.BasePage.findElement(BasePage.java:33)
+	at pages.LoginPage.getUserElement(LoginPage.java:26)
+	at handles.Loginhandle.login(Loginhandle.java:17)
+	at testcase.LoginTest.f2(LoginTest.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -123,30 +129,39 @@ Session ID: 04becd22edfb829f989c50858d1f3bb6
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace20049680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20049680'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos; 退出&apos;]&quot;}
-  (Session info: chrome=80.0.3987.149)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Mac OS X 10.12.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:331)
+	... 31 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1789718525", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1789718525'><pre>org.openqa.selenium.WebDriverException: Returned value cannot be converted to WebElement: {stacktrace=0   chromedriver                        0x0000000102d4dec9 chromedriver + 3837641
+1   chromedriver                        0x0000000102ce7cc3 chromedriver + 3419331
+2   chromedriver                        0x0000000102a5c042 chromedriver + 749634
+3   chromedriver                        0x00000001029bf4cc chromedriver + 107724
+4   chromedriver                        0x00000001029e5f2c chromedriver + 266028
+5   chromedriver                        0x00000001029e4342 chromedriver + 258882
+6   chromedriver                        0x00000001029e3b87 chromedriver + 256903
+7   chromedriver                        0x00000001029aa079 chromedriver + 20601
+8   chromedriver                        0x0000000102d0fa5f chromedriver + 3582559
+9   chromedriver                        0x0000000102d1c9ea chromedriver + 3635690
+10  chromedriver                        0x0000000102d1c787 chromedriver + 3635079
+11  chromedriver                        0x0000000102cf33d9 chromedriver + 3466201
+12  chromedriver                        0x0000000102d1d2a7 chromedriver + 3637927
+13  chromedriver                        0x0000000102d05867 chromedriver + 3541095
+14  chromedriver                        0x00000001029a7ad7 chromedriver + 10967
+15  libdyld.dylib                       0x00007fffa932e235 start + 1
+16  ???                                 0x0000000000000002 0x0 + 2
+, error=invalid session id, message=invalid session id}
 Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
 System info: host: &apos;jiubugaosunideMacBook-Pro.local&apos;, ip: &apos;192.168.2.105&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:63894}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=/var/folders/nd/v6qfnlyj7gq_l728vhl8zc0h0000gn/T/.com.google.Chrome.OXypIE}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.149, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 04becd22edfb829f989c50858d1f3bb6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:367)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
-	at testcase.TestCase.loginResult(TestCase.java:39)
-	at testcase.TestCase.testLoginError(TestCase.java:51)
+	at pages.BasePage.findElement(BasePage.java:33)
+	at pages.LoginPage.getUserElement(LoginPage.java:26)
+	at handles.Loginhandle.login(Loginhandle.java:17)
+	at testcase.LoginTest.f2(LoginTest.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,9 +186,12 @@ Session ID: 04becd22edfb829f989c50858d1f3bb6
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:331)
+	... 31 more
 </pre></div></td>
-<td>1</td>
-<td>testcase.TestCase@4c583ecf</td></tr>
+<td>0</td>
+<td>testcase.LoginTest@14cd1699</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -183,10 +201,10 @@ Session ID: 04becd22edfb829f989c50858d1f3bb6
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcase.TestCase.testLoginSuccess()'><b>testLoginSuccess</b><br>Test class: testcase.TestCase</td>
+<td title='testcase.LoginTest.f1()'><b>f1</b><br>Test class: testcase.LoginTest</td>
 <td></td>
 <td>1</td>
-<td>testcase.TestCase@4c583ecf</td></tr>
+<td>testcase.LoginTest@14cd1699</td></tr>
 </table><p>
 </body>
 </html>

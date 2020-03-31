@@ -1,12 +1,15 @@
 package pages;
 
-import base.DriverBase;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import util.ReadFile;
 
-import java.util.List;
+import util.ReadFile;
 
 public class BasePage {
     public WebDriver webDriver;
@@ -21,18 +24,28 @@ public class BasePage {
         webDriver.manage().window().maximize();
     }
 
-
-    public WebElement element(By by) {
-        WebElement element = webDriver.findElement(by);
-        //WebElement element = webDriver.findElement(By.id("username"));
-        return element;
-    }
+//
+//    public WebElement element(By by) {
+//        WebElement element = webDriver.findElement(by);
+//        //WebElement element = webDriver.findElement(By.id("username"));
+//        return element;
+//    }
 
 
     public WebElement findElement(By by) {
         WebElement element = webDriver.findElement(by);
         //WebElement element = webDriver.findElement(By.id("username"));
+        
         return element;
+    }
+//    Map<String,List<String>> map = new HashMap<String,List<String>>();
+    public List<String> getPageElement(Map<String,List<String>> m) {
+    	
+    	List<String> li = new ArrayList<String>();
+    	for(Map.Entry<String, List<String>> entry : m.entrySet()) {
+    		li.add(entry.getKey());
+    	}
+    	return li;
     }
 
     //找到页面对应的元素定位信息

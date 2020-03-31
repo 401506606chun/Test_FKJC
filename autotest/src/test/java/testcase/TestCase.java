@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import base.DriverBase;
 import constant.Constant;
 import org.openqa.selenium.By;
@@ -18,10 +20,9 @@ public class TestCase {
 
     LoginPage loginPage = new LoginPage(driver);
 
-
-    public void signIn(String url,String user,String password) {
+    public void signIn(String user,String password) {
 //       打开登录页面
-        loginPage.gotoUrl(url);
+        loginPage.gotoUrl(Constant.loginUrl);
 //        输入用户名 user
         loginPage.getUserElement().sendKeys(user);
 //        输入密码 password
@@ -30,6 +31,7 @@ public class TestCase {
         loginPage.getLoginbuttonElement().click();
 
     }
+
     public boolean  loginResult(){
         try {
             Thread.sleep(1000);
@@ -42,21 +44,29 @@ public class TestCase {
         isLogin = logout.isDisplayed();
         return isLogin;
     }
-    @Test
-    public void testLoginSuccess(){
-        this.signIn(Constant.loginUrl,"admin","123456");
-        AssertJUnit.assertTrue(this.loginResult());
-    }
-    @Test
-    public void testLoginError(){
-        this.signIn(Constant.loginUrl,"admin","1234567");
-        AssertJUnit.assertTrue(this.loginResult());
-    }
-    @Test
-    public void testLogin(String user,String pwd) {
-    	this.signIn(Constant.loginUrl,user,pwd);
-        AssertJUnit.assertTrue(this.loginResult());
-    }
+/*
+ * 测试方法testLogin
+ * 入参分别为用户、密码  user 及pwd
+ * */
+    
+
+//    public void testLogin(String user,String pwd) {
+//    	this.signIn(Constant.loginUrl,user,pwd);
+//        AssertJUnit.assertTrue(this.loginResult());
+//    }
+//    
+//    
+//    @Test
+//    public void testLoginSuccess(){
+//        this.signIn(Constant.loginUrl,"admin","123456");
+//        AssertJUnit.assertTrue(this.loginResult());
+//    }
+//    @Test
+//    public void testLoginError(){
+//        this.signIn(Constant.loginUrl,"admin","1234567");
+//        AssertJUnit.assertTrue(this.loginResult());
+//    }
+ 
     
     
 //    public static void main(String args[]) {
